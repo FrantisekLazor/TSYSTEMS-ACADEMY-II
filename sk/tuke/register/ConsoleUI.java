@@ -71,9 +71,17 @@ public class ConsoleUI {
         return Option.values()[selection - 1];
     }
 
+
+
     //TODO: Implement the method printRegister
     private void printRegister() {
-        throw new UnsupportedOperationException("Method printRegister not yet implemented");
+
+        for (int i = 0; i < register.getCount(); i++) {
+            System.out.print(i+1 + ". ");
+            System.out.println(register.getPerson(i));
+
+        }
+        //throw new UnsupportedOperationException("Method printRegister not yet implemented");
     }
 
     private void addToRegister() {

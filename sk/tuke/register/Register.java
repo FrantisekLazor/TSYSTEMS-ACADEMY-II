@@ -81,6 +81,13 @@ public class Register {
      * @param person person to remove
      */
     public void removePerson(Person person) {
-        throw new UnsupportedOperationException("Method removePerson not yet implemented");
+        for (Person person1 : persons) {
+            if (person1==person){
+//                person1.setName("Robert");
+                
+            }
+
+        }
+        //throw new UnsupportedOperationException("Method removePerson not yet implemented");
     }
 }

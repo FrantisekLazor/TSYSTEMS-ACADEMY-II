@@ -75,12 +75,13 @@ public class Person {
     private boolean isValidPhoneNumber(String phoneNumber) {
         for (int i = 0; i < phoneNumber.length(); i++) {
             if (Character.isDigit((phoneNumber.charAt(i)))) {
-                return true;
-            } else  {
+
+            } else {
                 return false;
             }
         }
 
+        return true;
     }
 
 
