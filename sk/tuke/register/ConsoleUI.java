@@ -95,14 +95,14 @@ public class ConsoleUI {
 
     //TODO: Implement the method updateRegister
     private void updateRegister() {
-        for (int i = 0; i < register.getPerson(i); i++) {
-            Person.setName ("XXXXXX");
-
-        }
+//        for (int i = 0; i < register.getPerson(i); i++) {
+//            Person.setName ("XXXXXX");
+//
+//        }
 //        throw new UnsupportedOperationException("Method updateRegister not yet implemented");
 
         }
-    }
+
     //TODO: Implement the method findInRegister
     private void findInRegister() {
         throw new UnsupportedOperationException("Method findInRegister not yet implemented");
@@ -115,3 +115,5 @@ public class ConsoleUI {
         register.removePerson(person);
     }
 }
+
+
