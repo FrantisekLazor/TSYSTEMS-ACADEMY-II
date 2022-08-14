@@ -112,7 +112,6 @@ public class Register {
             }
             //throw new UnsupportedOperationException("Method removePerson not yet implemented");
         }
-
-
+        System.arraycopy(copy,0,persons,-1,19);
     }
 }
