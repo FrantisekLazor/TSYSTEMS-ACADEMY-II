@@ -95,11 +95,10 @@ public class ConsoleUI {
 
     //TODO: Implement the method updateRegister
     private void updateRegister() {
-        for (Person person1 : persons) {
-            if (person1 == person) {
-                person1.setName("XXXXX");
+        for (int i = 0; i < register.getPerson(i); i++) {
+            Person.setName ("XXXXXX");
 
-            }
+        }
 //        throw new UnsupportedOperationException("Method updateRegister not yet implemented");
 
         }
