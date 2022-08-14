@@ -84,8 +84,9 @@ public class Register {
         for (Person person1 : persons) {
             if (person1==person){
 //                person1.setName("Robert");
-                
+
             }
+
 
         }
         //throw new UnsupportedOperationException("Method removePerson not yet implemented");

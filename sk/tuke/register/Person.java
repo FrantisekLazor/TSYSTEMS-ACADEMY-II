@@ -64,7 +64,7 @@ public class Person {
         phoneNumber = phoneNumberNew;
     }
 
-    //TODO: Implement method isValidPhoneNumber
+
 
     /**
      * Validates the phone number. Valid phone numbers contains only digits.

@@ -73,7 +73,7 @@ public class ConsoleUI {
 
 
 
-    //TODO: Implement the method printRegister
+
     private void printRegister() {
 
         for (int i = 0; i < register.getCount(); i++) {
@@ -95,9 +95,15 @@ public class ConsoleUI {
 
     //TODO: Implement the method updateRegister
     private void updateRegister() {
-        throw new UnsupportedOperationException("Method updateRegister not yet implemented");
-    }
+        for (Person person1 : persons) {
+            if (person1 == person) {
+                person1.setName("XXXXX");
 
+            }
+//        throw new UnsupportedOperationException("Method updateRegister not yet implemented");
+
+        }
+    }
     //TODO: Implement the method findInRegister
     private void findInRegister() {
         throw new UnsupportedOperationException("Method findInRegister not yet implemented");
