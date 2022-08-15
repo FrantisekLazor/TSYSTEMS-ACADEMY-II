@@ -105,7 +105,7 @@ public class ConsoleUI {
 
     //TODO: Implement the method findInRegister
     private void findInRegister() {
-        throw new UnsupportedOperationException("Method findInRegister not yet implemented");
+
     }
 
     private void removeFromRegister() {
