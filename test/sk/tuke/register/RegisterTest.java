@@ -17,5 +17,11 @@ public class RegisterTest {
         assertEquals("123", person.getPhoneNumber());
     }
 
+    @Test
+//    public void removePerson(){
+//        var person = new Person("Janko",);
+//        assertEquals("123", person.getPhoneNumber());
+//    }
+
 
 }
