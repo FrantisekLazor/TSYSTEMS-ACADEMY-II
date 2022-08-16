@@ -10,6 +10,7 @@ public class Rectangle extends Shape {
     private int height;
 
     public Rectangle(int x, int y, int width, int height) {
+        super(Color.YELLOW);
         this.x = x;
         this.y = y;
         this.width = width;
@@ -17,10 +18,7 @@ public class Rectangle extends Shape {
     }
 
     public Rectangle(int x, int y, int width, int height, Color color) {
-        this.x = x;
-        this.y = y;
-        this.width = width;
-        this.height = height;
+        this(x, y, width, height);
         setColor(color);
     }
 
@@ -36,49 +34,33 @@ public class Rectangle extends Shape {
         return width;
     }
 
-    public int getXheight() {
+    public int getHeight() {
         return height;
     }
 
     public int getRightX() {
         return x + width;
     }
-    public int getBottomY() {
-        return x + height;
-    }
 
+    public int getBottomY() {
+        return y + height;
+    }
 
     @Override
     public void draw() {
-        System.out.println("Drawing rectangle [" + x + "," + y + "] with width " + width + ", height " + height + " and color " + getColor());
+        System.out.println("Drawing rectangle [" + x + ", " + y + "] with width "
+                + width + ", height " + height + " and color " + getColor());
     }
 
     @Override
     public void move(int deltaX, int deltaY) {
-//        System.out.println("rectangle move from x:" + x + " y:" + y + " to x:" + deltaX + " to y:" + deltaY);
-        x += deltaX;
-        y += deltaY;
+        x += deltaX;    //x = x + deltaX;
+        y += deltaY;    //y = y + deltaY;
     }
 
     @Override
-    public void resize(int length1) {
-
-    }
-
-  //  @Override
-//    public void resize(float percentage) {
-//        width *= percentage;
-//        height *= percentage;
-
-    public void resize(int width, int height){
-        this.width += width;
-        this.height += height;
-    }
-
-    @Override
-    public String toString() {
-        return "Rectangle [" + x + "," + y + "] with width " + width + ", height " + height + " and color " + getColor();
+    public void resize(double factor) {
+        width = (int) (width * factor);
+        height = (int) (height * factor);
     }
 }
-
-

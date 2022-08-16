@@ -13,7 +13,6 @@ public class Person {
         this.age = age;
     }
 
-
     public String getFirstName() {
         return firstName;
     }
@@ -39,9 +38,10 @@ public class Person {
     }
 
     public void sayHello() {
-        System.out.println("Hello! I am " + firstName + " " + lastName + ". " + "I am " + age + " old");
+        System.out.println("Hello! I'm " + firstName + " " + lastName + ".");
     }
-    public String getInitials(){
-        return firstName.charAt(0) + "." + lastName.charAt(0) + ".";   //charAt / je metoda, ktora vrati znak, v tomto nulty znam objektu cize prve pismeno
+
+    public String getInitials() {
+        return firstName.charAt(0) + "." + lastName.charAt(0) + ".";
     }
 }

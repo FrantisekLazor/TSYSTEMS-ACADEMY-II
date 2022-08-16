@@ -1,8 +1,7 @@
 package sk.tuke.gamestudio.game.mines.core;
 
 public class Clue extends Tile {
-
-    private final int value;    /// final ta hodnota sa neda menit
+    private final int value;
 
     public Clue(int value) {
         this.value = value;

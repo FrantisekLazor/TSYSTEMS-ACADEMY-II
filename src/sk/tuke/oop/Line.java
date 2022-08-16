@@ -1,68 +1,38 @@
 package sk.tuke.oop;
 
 public class Line extends Shape {
+    private Point from;
 
-    private Point point1= new Point();
-    private Point point2=new Point();
+    private Point to;
 
-    public Line(){
-        this.point1.setX(20);
-        this.point1.setY(20);
-
-        this.point2.setX(25);
-        this.point2.setY(25);
+    public Line(Point from, Point to) {
+        this.from = from;
+        this.to = to;
     }
 
-    public Line(Point point1, Point point2) {
-        this.point1 = point1;
-        this.point2 = point2;
+    public Point getFrom() {
+        return from;
     }
 
-    public Line(Color color, Point point1, Point point2) {
-        super(color);
-        this.point1 = point1;
-        this.point2 = point2;
+    public Point getTo() {
+        return to;
     }
 
     @Override
     public void draw() {
-        System.out.println("drawing Line with 2 points P1["+this.point1.x+","
-                +this.point1.x+"] P2["+this.point2.x+","+this.point2.y+"]");
-
-    }
-
-//    @Override
-//    public void sayhello() {
-//
-//    }
-
-    @Override
-    public void move(int x, int y) {
-        this.point2.x+=x;
-        this.point2.y+=y;
-
-        this.point1.x+=x;
-        this.point1.y+=y;
-
-
+        System.out.println("Drawing line [" + from.getX() + ", " + from.getY()
+                + "] -> [" + to.getX() + ", " + to.getY() + "] with color " + getColor());
     }
 
     @Override
-    public void resize(int widht, int height) {
-
+    public void move(int deltaX, int deltaY) {
+        from.move(deltaX, deltaY);
+        to.move(deltaX, deltaY);
     }
 
     @Override
-    public void resize(int widht) {
-
+    public void resize(double factor) {
+        to.move((int) ((to.getX() - from.getX()) * (factor - 1)),
+                (int) ((to.getY() - from.getY()) * (factor - 1)));
     }
-
-    @Override
-    public void resize_Percentege(double factor) {
-//        to.move(int)((to.getX));
-        this.point2.y=(int)( this.point2.y* factor);
-
-    }
-
-    //to string meni objekt na retazec
 }

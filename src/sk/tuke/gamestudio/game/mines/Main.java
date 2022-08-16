@@ -5,11 +5,12 @@ import sk.tuke.gamestudio.game.mines.core.Field;
 
 public class Main {
     public static void main(String[] args) {
-        var field = new Field(9, 9, 10);
+        var field = new Field(4, 4, 8);
         for (var row = 0; row < field.getRowCount(); row++) {
             for (var column = 0; column < field.getColumnCount(); column++) {
                 var tile = field.getTile(row, column);
-                switch  (tile.getState()) {
+                System.out.print(" ");
+                switch (tile.getState()) {
                     case CLOSED:
                         System.out.print("-");
                         break;
@@ -22,13 +23,6 @@ public class Main {
                         else
                             System.out.print("X");
                 }
-
-
-//                System.out.print(" ");
-//                if (tile instanceof Clue)
-//                    System.out.print(((Clue) tile).getValue()); // ymenili sme ,pretipuje tile na clue
-//                else
-//                    System.out.print("X");
             }
             System.out.println();
         }

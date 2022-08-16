@@ -1,22 +1,20 @@
 package sk.tuke.oop;
 
-public class Triangle extends Shape{
+public class Triangle extends Shape {
     private int x;
 
     private int y;
 
-    private int lenght;
+    private int side;
 
-    public Triangle(int x, int y, int lenght) {
+    public Triangle(int x, int y, int side) {
         this.x = x;
         this.y = y;
-        this.lenght = lenght;
+        this.side = side;
     }
 
-    public Triangle(int x, int y, int lenght, Color color) {
-        this.x = x;
-        this.y = y;
-        this.lenght = lenght;
+    public Triangle(int x, int y, int side, Color color) {
+        this(x, y, side);
         setColor(color);
     }
 
@@ -28,44 +26,40 @@ public class Triangle extends Shape{
         return y;
     }
 
-    public int getLenght() {
-        return lenght;
+    public int getRightX() {
+        return x + side;
     }
 
-    public int getRightX(){
-        return x + lenght;
-    }
-    public int getRightY(){
+    public int getRightY() {
         return y;
     }
-    public int getBottomX(){
-        return x + lenght /2;
+
+    public int getBottomX() {
+        return x + side / 2;
     }
-    public int getBottomY(){
-        return (int)(y + lenght * Math.sqrt(3)/2);
+
+    public int getBottomY() {
+        return (int)(y + side * Math.sqrt(3) / 2);
+    }
+
+    public int getSide() {
+        return side;
     }
 
     @Override
     public void draw() {
-        System.out.println("Drawing triangle [" + x + "," + y + "] with length " + lenght + " and color " + getColor());
-
-    }
-    public void move(int deltaX, int deltaY) {
-        x += deltaX;
-        y += deltaY;
-    }
- //   @Override
-//    public void resize(float percentage) {
-//        lenght *= percentage;
-
-//    }
-    public void resize(int length1){
-        lenght += length1;
-
+        System.out.println("Drawing triangle [" + x + ", " + y + "] with side "
+                + side + " and color " + getColor());
     }
 
     @Override
-    public void resize(int width, int height) {
+    public void move(int deltaX, int deltaY) {
+        x += deltaX;    //x = x + deltaX;
+        y += deltaY;    //y = y + deltaY;
+    }
 
+    @Override
+    public void resize(double factor) {
+        side = (int) (side * factor);
     }
 }
