@@ -31,31 +31,21 @@ public class Field {
     }
 
     private void printField() {
-        var x = columnCount * rowCount;
-        for (var i = 0; i < tiles.length; i++) {
-            for (var j = 0; j < tiles[i].length; j++) {
-                tiles[i][j] = i + j;
-//                System.out.print(i + 1 + "\t");
-//                i++;
+        int x = 1;
+        for (int i = 0; i < tiles.length; i++) {
+            for (int j = 0; j < tiles[i].length; j++) {
+                tiles[i][j] = x;
+                System.out.print(x + "\t");
+                x++;
             }
-
-//            System.out.println("\n");
-
+            System.out.println();
         }
+        shuffleFIeld();
+    }
 
-        for (int[] a : tiles) {
-            for (int i : a) {
-                        System.out.print(i + 1 + "\t");
-                        i++;
-                    }
-
-                    System.out.println("\n");
-
-                }
-
-
-            }
-        }
+    private void shuffleFIeld() {
+    }
+}
 
 
 
