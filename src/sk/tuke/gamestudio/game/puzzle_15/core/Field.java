@@ -32,6 +32,8 @@ public class Field {
 
     private void printField() {
         int x = 1;
+        int y = rowCount*columnCount;
+
         for (int i = 0; i < tiles.length; i++) {
             for (int j = 0; j < tiles[i].length; j++) {
                 tiles[i][j] = x;
