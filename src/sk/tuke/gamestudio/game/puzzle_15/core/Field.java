@@ -32,6 +32,7 @@ public class Field {
 
     private void printField() {
         int x = 1;
+        int z = tiles.length -1;
         int y = rowCount*columnCount;
 
         for (int i = 0; i < tiles.length; i++) {
@@ -39,6 +40,10 @@ public class Field {
                 tiles[i][j] = x;
                 System.out.print(x + "\t");
                 x++;
+            if (x==16){
+                
+            }
+
             }
             System.out.println();
         }
