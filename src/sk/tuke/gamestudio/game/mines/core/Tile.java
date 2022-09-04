@@ -6,7 +6,6 @@ public abstract class Tile {
     public TileState getState() {
         return state;
     }
-
     void setState(TileState state) {
         this.state = state;
     }
